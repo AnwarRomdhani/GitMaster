@@ -1,0 +1,62 @@
+4. Comment vérifier la configura�on actuelle de Git sur votre machine, notamment le nom
+d’u�lisateur et l’adresse e-mail ?
+git config --global user.name "Votre Nom"
+git config --global user.email votre@email.com
+
+
+5. Comment modifier votre adresse e-mail si vous l'avez mal configurée lors de l'installa�on
+de Git ?
+git config --global user.email votre@email.com
+
+6. Si vous avez oublié de créer un fichier README.md lors de l'ini�alisa�on du projet,
+touch README.md
+
+comment pouvez-vous l'ajouter après coup et commiter les changements ?
+
+git add README.md
+git commit -m "Add README file"
+git push origin main
+
+7. Comment définir un dépôt distant si vous n'en avez pas configuré un lors de la créa�on
+du projet ?
+
+git remote set origin https://github.com/user/repo.git
+
+3. Comment annuler les modifica�ons locales d'un fichier avant de les ajouter à l'index ?
+git checkout -- <file>
+
+
+
+4. Comment visualiser les fichiers qui sont prêts à être commités dans Git (staging) ?
+git status
+
+4. Comment suivre (track) un dépôt distant et récupérer toutes les branches de ce dépôt ?
+
+git remote add <remote_name> <repo_url>
+
+git remote add origin https://github.com/user/repo.git
+
+
+
+5. Comment supprimer une branche locale après l'avoir fusionnée dans master ?
+>> to check if the branch is correctly merged
+git checkout master
+git merge --no-ff <branch_name>
+
+git branch -d <branch_name>
+
+8. Comment afficher la liste des branches ac�ves et en cours de développement dans
+Gi�low ?
+git flow feature list
+
+
+
+
+9. Comment annuler une branche de correc�f (ho�ix) avant de la finaliser si vous constatez
+une erreur ?
+
+git checkout develop  # or master
+
+git flow hotfix finish <hotfix_name> -d
+
+
